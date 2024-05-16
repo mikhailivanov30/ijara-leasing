@@ -1,0 +1,469 @@
+@import "../../scss/varuables.scss";
+.header {
+	position: relative;
+	width: 100%;
+	height: 850px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__container {
+		width: 100%;
+		height: 100%;
+		&_elements {
+			position: absolute;
+			top: 25%;
+			z-index: 12;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			width: 40%;
+			h1 {
+				font-size: 50px;
+				font-family: $font_titles;
+				font-weight: 700;
+				line-height: 40px;
+				span {
+					font-weight: 400;
+				}
+				@media (min-width: $xxl) {
+					font-size: 63px;
+				}
+			}
+			p {
+				margin-bottom: 10px;
+				font-size: 25px;
+				line-height: 40px;
+				font-family: $font_texts;
+			}
+			&_buttons {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 30px;
+				width: 100%;
+				&_div1 {
+					width: 267px;
+					height: 61px;
+					width: 45%;
+					button {
+						font-size: 18px;
+					}
+				}
+				&_div2 {
+					width: 200px;
+					height: 61px;
+					width: 45%;
+					button {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		&_img {
+			width: 60%;
+			height: auto;
+			max-height: 52%;
+			position: absolute;
+			right: -10%;
+			top: 20%;
+			z-index: 1;
+			@media (min-width: 1600px) {
+				width: 50%;
+			}
+			// object-fit: cover;
+			// transform: rotate(-100deg);
+			// animation: car 2s cubic-bezier(0.87, -0.17, 0.16, 1.27) 1 alternate
+			// 	forwards;
+			// animation-timing-function: cubic-bezier(0.94, -0.24, 0.47, 1.07);
+		}
+		&_imgMobile {
+			display: none;
+		}
+	}
+	&__categories {
+		height: 200px;
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		z-index: 12;
+		width: 100%;
+	}
+	&__darkBottom {
+		position: absolute;
+		width: 150%;
+		height: 0px;
+		bottom: -15%;
+		left: -25%;
+		box-shadow: 0 -150px 200px 150px var(--headerBottomShadow);
+		z-index: 0;
+	}
+	.arrows {
+		width: 20%;
+		position: absolute;
+		bottom: 220px;
+		left: 40%;
+		margin-top: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		&_left {
+			position: relative;
+			cursor: pointer;
+			transition: 0.3s;
+			&:hover {
+				svg {
+					background: $primary;
+					color: $light;
+					box-shadow: none;
+				}
+			}
+			&:hover::after {
+				transition: 0.3s;
+				left: 0px;
+				bottom: 0px;
+			}
+		}
+		&_left::after {
+			transition: 0.3s;
+			content: "after";
+			color: transparent;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 5px;
+			bottom: -3px;
+			z-index: 1;
+			background: $primary;
+			box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.417);
+		}
+		&_right {
+			position: relative;
+			cursor: pointer;
+			&:hover {
+				svg {
+					background: $primary;
+					color: $light;
+					box-shadow: none;
+				}
+			}
+			&:hover::after {
+				transition: 0.3s;
+				right: 0px;
+				bottom: 0px;
+			}
+			svg {
+				box-shadow: 2px -3px 15px rgba(0, 0, 0, 0.804);
+			}
+		}
+		&_right::after {
+			content: "after";
+			color: transparent;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: 5px;
+			bottom: -3px;
+			z-index: 1;
+			background: $primary;
+			box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.417);
+		}
+		svg {
+			transition: 0.3s;
+			background: $light;
+			width: 4.5rem;
+			font-size: 2rem;
+			color: $primary;
+			position: relative;
+			z-index: 12;
+			box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.804);
+		}
+	}
+	@media (min-width: $xxl) {
+		height: 980px;
+	}
+
+	@media (min-width: 2410px) {
+		height: 1070px;
+	}
+}
+@media (max-width: $xl) {
+	.header {
+		height: 800px;
+		&__container {
+			&_elements {
+				position: absolute;
+				top: 20%;
+				z-index: 12;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+				width: 60%;
+
+				h1 {
+					font-size: 50px;
+					font-family: $font_titles;
+					font-weight: 700;
+					line-height: 40px;
+
+					span {
+						font-weight: 400;
+					}
+				}
+				p {
+					margin-bottom: 10px;
+					font-size: 25px;
+					line-height: 40px;
+					font-family: $font_texts;
+				}
+				&_buttons {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 30px;
+					width: 100%;
+					&_div1 {
+						width: 267px;
+						height: 61px;
+						width: 45%;
+						button {
+							font-size: 18px;
+						}
+					}
+					&_div2 {
+						width: 200px;
+						height: 61px;
+						width: 45%;
+						button {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			&_img {
+				width: 80%;
+				position: absolute;
+				right: -10%;
+				top: 20%;
+				z-index: 1;
+			}
+		}
+	}
+}
+@media (max-width: $md) {
+	.header {
+		height: 750px;
+		&__container {
+			&_elements {
+				position: absolute;
+				top: 20%;
+				z-index: 12;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				width: 80%;
+
+				text-align: center;
+				h1 {
+					font-size: 35px;
+					font-family: $font_titles;
+					font-weight: 700;
+					line-height: 30px;
+					text-align: center;
+					span {
+						font-weight: 400;
+					}
+				}
+				p {
+					margin-bottom: 10px;
+					font-size: 20px;
+					line-height: 40px;
+					font-family: $font_texts;
+					text-align: center;
+				}
+				&_buttons {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 30px;
+					width: 100%;
+					&_div1 {
+						width: 267px;
+						height: 61px;
+						width: 45%;
+						button {
+							font-size: 18px;
+						}
+					}
+					&_div2 {
+						width: 200px;
+						height: 61px;
+						width: 45%;
+						button {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			&_img {
+				width: 80%;
+				position: absolute;
+				right: -10%;
+				top: 20%;
+				z-index: 1;
+			}
+		}
+		&__categories {
+			bottom: -90px;
+		}
+		.arrows {
+			width: 60%;
+			bottom: 130px;
+			left: 20%;
+		}
+	}
+}
+@media (max-width: $sm) {
+	.header {
+		height: 600px;
+		&__container {
+			&_elements {
+				position: absolute;
+				top: 22%;
+				z-index: 12;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+				width: 90%;
+
+				text-align: center;
+				h1 {
+					font-size: 30px;
+					font-family: $font_titles;
+					font-weight: 700;
+					line-height: 18px;
+					text-align: center;
+					span {
+						font-weight: 400;
+					}
+				}
+				p {
+					margin-bottom: 10px;
+					margin-top: 10px;
+					font-size: 15px;
+					line-height: 25px;
+					font-family: $font_texts;
+					text-align: center;
+				}
+				&_buttons {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					gap: 15px;
+					width: 100%;
+					&_div1 {
+						height: 51px;
+						width: 100%;
+						button {
+							font-size: 18px;
+						}
+					}
+					&_div2 {
+						width: 200px;
+						height: 51px;
+						width: 100%;
+						button {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			&_img {
+				width: 100%;
+				position: absolute;
+				right: 0%;
+				top: 50%;
+				z-index: 1;
+				display: none;
+			}
+			&_imgMobile {
+				display: block;
+				position: absolute;
+				top: 10vh;
+				left: 0;
+				bottom: 20%;
+				width: 100%;
+				height: 62%;
+				object-fit: cover;
+				opacity: 0.2;
+			}
+		}
+	}
+}
+@keyframes car {
+	0% {
+		right: -80%;
+	}
+	90% {
+		transform: rotate(-0.2deg);
+	}
+	100% {
+		right: -10%;
+		transform: rotate(0deg);
+	}
+}
+// @keyframes dust {
+// 	0% {
+// 		right: 0%;
+// 		box-shadow: 0px 0px 100px 70px#666;
+// 	}
+// 	10% {
+// 		opacity: 0.1;
+// 		right: 25%;
+// 		box-shadow: 0px 0px 100px 70px#666;
+// 	}
+// 	50% {
+// 		opacity: 1;
+// 		// right: 80%;
+// 		top: 40%;
+// 		box-shadow: 0px 0px 600px 200px#666;
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 		right: 150%;
+// 		top: 20%;
+// 		box-shadow: 0px 0px 800px 400px#666;
+// 	}
+// }
+// @keyframes dust2 {
+// 	0% {
+// 		right: 0%;
+// 		box-shadow: 0px 0px 100px 70px#666;
+// 	}
+// 	10% {
+// 		opacity: 0;
+// 		right: 30%;
+// 		box-shadow: 0px 0px 100px 70px#666;
+// 	}
+// 	50% {
+// 		opacity: 1;
+// 		// right: 80%;
+// 		top: 10%;
+// 		box-shadow: 0px 0px 800px 400px#666;
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 		right: 180%;
+// 		top: -70%;
+// 		box-shadow: 0px 0px 1000px 500px#666;
+// 	}
+// }

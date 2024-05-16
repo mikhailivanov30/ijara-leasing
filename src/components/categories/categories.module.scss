@@ -1,0 +1,217 @@
+@import "../../scss/varuables.scss";
+
+.categories {
+	height: 200px;
+	padding: 0 3%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-image: linear-gradient(var(--transparentBG), var(--transparentBG)),
+		url("../../media/in_chevrolet.png");
+	background-size: cover;
+	overflow: hidden;
+	box-shadow: 2px 5px 30px 5px rgba(0, 0, 0, 0.595);
+	&__titles {
+		overflow: hidden;
+		width: 25%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		&:hover {
+			span {
+				transform: perspective(100px) rotateY(360deg);
+			}
+		}
+		&:nth-child(1) {
+			width: 35%;
+		}
+		&:nth-child(5) {
+			width: 35%;
+		}
+		span {
+			transition: 1s;
+			font-size: 40px;
+			cursor: pointer;
+			svg {
+				// color: #319ba1;
+				color: $primary;
+				font-size: 40px;
+			}
+		}
+		p {
+			font-size: 25px;
+			font-family: $font_texts;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			span {
+				margin: 5px 5px 0 0;
+			}
+		}
+	}
+	&__line {
+		height: 90%;
+		width: 2px;
+		border-radius: 100%;
+		background: linear-gradient(#1b1c3b00, $primary, #1b1c3b00);
+	}
+}
+
+@media (max-width: $xl) {
+	.categories {
+		height: 200px;
+		padding: 0 3%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		overflow: hidden;
+		&__titles {
+			overflow: hidden;
+			width: 25%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			&:hover {
+				span {
+					transform: perspective(100px) rotateY(360deg);
+				}
+			}
+			&:nth-child(1) {
+				width: 35%;
+			}
+			&:nth-child(5) {
+				width: 35%;
+			}
+			span {
+				transition: 1s;
+				font-size: 35px;
+				cursor: pointer;
+				svg {
+					// color: #319ba1;
+					color: $primary;
+					font-size: 35px;
+				}
+			}
+			p {
+				font-size: 20px;
+				font-family: $font_texts;
+			}
+		}
+
+	}
+}
+@media (max-width: $md) {
+	.categories {
+		height: auto;
+		padding: 5% 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		overflow: hidden;
+		gap: 10px;
+		&__titles {
+			overflow: hidden;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			flex-direction: row;
+			&:hover {
+				span {
+					transform: perspective(100px) rotateY(360deg);
+				}
+			}
+			&:nth-child(1) {
+				width: 100%;
+			}
+			&:nth-child(5) {
+				width: 100%;
+			}
+			span {
+				transition: 1s;
+				font-size: 25px;
+				cursor: pointer;
+				svg {
+					// color: #319ba1;
+					color: $primary;
+					font-size: 25px;
+				}
+			}
+			p {
+				font-size: 20px;
+				font-family: $font_texts;
+				text-align: center;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				span {
+					margin: 0px 5px 0 0;
+				}
+			}
+		}
+
+	}
+}
+@media (max-width: $sm) {
+	.categories {
+		height: auto;
+		padding: 5% 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		overflow: hidden;
+		gap: 10px;
+		&__titles {
+			overflow: hidden;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			flex-direction: row;
+			&:hover {
+				span {
+					transform: perspective(100px) rotateY(360deg);
+				}
+			}
+			&:nth-child(1) {
+				width: 70%;
+				gap: 1px;
+				p {
+					position: relative;
+					span {
+						position: absolute;
+						left: 5px;
+					}
+				}
+			}
+			&:nth-child(5) {
+				width: 100%;
+			}
+			span {
+				transition: 1s;
+				font-size: 20px;
+				cursor: pointer;
+				svg {
+					// color: #319ba1;
+					color: $primary;
+					font-size: 20px;
+				}
+			}
+			p {
+				font-size: 17px;
+				font-family: $font_texts;
+				text-align: center;
+				span {
+					margin: 1px 5px 0 0;
+				}
+			}
+		}
+
+	}
+}
