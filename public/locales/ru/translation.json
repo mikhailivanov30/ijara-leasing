@@ -249,15 +249,16 @@
 		}
 	},
 	"modal": {
-		"submitTitle": "Заполните общую информацию",
-		"submitDescription": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, illo.",
+		"submitTitle": "Добро пожаловать в компанию Ijara Leasing!",
+		"submitDescription": "Пожалуйста, заполните форму, и наш специалист свяжется с вами в ближайшее время для консультации и подбора оптимального решения.",
 		"submitPhone": "Ф.И.O",
 		"submitPrice": "ИНН юридического лица",
 		"submitProduct": "Мобильный телефон",
 		"submitComments": "Электронная почта",
 		"modalAgree": "Я соглашаюсь с ",
 		"modalAgreeLink": "условиями обработки персональных данных ",
-		"submitSucces": "Ваша заявка успешно отправлена!"
+		"submitSucces": "Ваша заявка успешно отправлена!",
+		"submitText":"Отправить"
 	},
 	"footer": {
 		"addressTitle": "Наш адрес:",
